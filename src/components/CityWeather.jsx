@@ -106,6 +106,7 @@ function CityWeather() {
                   <br />
                   {item.weather[0].description}
                 </Card.Text>
+                {/* 👆 ANCHE QUI AIUTINO */}
               </Card.Body>
             </Card>
           </Col>
