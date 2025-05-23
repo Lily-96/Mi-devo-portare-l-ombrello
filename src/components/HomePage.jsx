@@ -32,6 +32,8 @@ function HomePage() {
       const meteoInfo = {
         city: name,
         country,
+        lat,
+        lon,
         weather: {
           temperature: weatherResult.main.temp,
           humidity: weatherResult.main.humidity,
@@ -42,6 +44,8 @@ function HomePage() {
 
       localStorage.setItem("meteoData", JSON.stringify(meteoInfo));
       setInformazioniBase({
+        lat,
+        lon,
         temperature: weatherResult.main.temp,
         description: weatherResult.weather[0].description,
         icon: weatherResult.weather[0].icon,
@@ -97,7 +101,7 @@ function HomePage() {
       {caricato && (
         <div>
           <Link to="/city-weather">
-            <Button variant="outline-dark" size="lg" className="mt-2">
+            <Button variant="outline-dark" size="lg" className="mt-3">
               Più dettagli
             </Button>
           </Link>
